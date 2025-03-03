@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - La Maison des Perles</title>
+    <link rel="stylesheet" href="../css/Epice produit.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/EAGLE LOGO .jpg" alt="Logo de l'entreprise">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="Epices index.html">Accueil</a></li>
+                <li><a href="Epice propos.html">À propos</a></li>
+                <li><a href="Epice produit.html">Produits</a></li>
+                <li><a href="Epice temoignage.html">Témoignages</a></li>
+                <li><a href="Epice achat.html">Acheter</a></li>
+                <li><a href="../index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <button id="domain-toggle" class="mini-btn">Domaines</button>
+            <ul id="domain-list" class="hidden">
+                <a href="Liqueur index.html" class="btn">Boissons et Liqueurs</a>
+                <a href="Epices index.html" class="btn">Epices Farines et Légumes</a>
+                <a href="service index.html" class="btn">Service Traiteur</a>
+                <a href="santé index.html" class="btn">Joaillerie et Lithothérapie</a>
+                <a href="Terre index.html" class="btn">Articles en terre cuite</a>
+            </ul>
+    </header>         
+    
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="../videos/n3.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos.
+    </video>
+    
+    <main class="title-grid">
+        <section class="page-container">
+            <!-- Contenu principal à gauche -->
+            <div class="product-content">
+                <div class="product-header">
+                    <h1>Epicer vos papilles grâce aux aux épices Dépur</h1>
+                    <p>
+                        Découvrez notre sélection d'épices, farines et légumes soigneusement cultivés et transformés<br>
+                        pour garantir qualité et saveurs authentiques. <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+<div class="Panier">
+    <h3>Vos ajouts se figurent dans le panier en bas</h3>
+</div>   
+<div class="Avant">
+    <h2>Description de nos épices :</h2>
+</div>
+
+        <!-- Grille des produits -->
+    <main>    
+        <Section>
+            <div class="products-grid">    
+                <div class="product-item depur-cristal">
+                    <img src="../img/Gboé.jpg" alt="DéPur Cristal">
+                    <div class="product-info">
+                        <h3>DéPur <br>Piment de table Gbo Ebessé déshydraté et moulu</h3>
+                        <p class="product-description">Notre piment de table est le fruit d'une sélection rigoureuse de Gbo Ebessé fort, et offre un goût unique. Les amateurs de piments seront comblés par cette nouveauté.</p>
+                        <span class="price">2000,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Cristal', 2000)">Ajouter au Panier</button>  
+                    </div>
+                </div>
+
+                <div class="product-item depur-cristal">
+                    <img src="../img/Piment.jpg" alt="DéPur Cristal">
+                    <div class="product-info">
+                        <h3>DéPur <br>Piment de table Gbo Ebessé déshydraté et moulu</h3>
+                        <p class="product-description">Notre piment de table est le fruit d'une sélection rigoureuse de Gbo Ebessé fort, et offre un goût unique. Les amateurs de piments seront comblés par cette nouveauté.</p>
+                        <span class="price">2000,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Cristal', 2000)">Ajouter au Panier</button>  
+                    </div>
+                </div>
+                
+                <div class="product-item depur-taurus">
+                    <img src="../img/Moutard.jpg" alt="DéPur Taurus">
+                    <div class="product-info">
+                        <h3>DéPur <br> Moutarde de Néré (Afinti)</h3>
+                        <p class="product-description">Produite exclusivement à base de graines, notre moutarde de Néré est 100% naturelle et offre un goût authentique.</p>
+                        <span class="price">500,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Taurus', 500)">Ajouter au Panier</button>
+                    </div>
+                </div>
+                <div class="product-item depur-digestif">
+                    <img src="../img/Adé.jpg" alt="DéPur Agathe Miel">
+                    <div class="product-info">
+                        <h3>DéPur <br> Bouillon-épices « Adé »</h3>
+                        <p class="product-description">Ce bouillon remplace avantageusement les cubes ou bouillons industriels, en offrant une alternative naturelle et savoureuse. Composé de romarin, persil, gingembre, anis vert, ail, etc. <br>Ce bouillon est conçu pour répondre aux besoins des familles conscientes des dangers des exhausteurs de goût chimiques.</p>
+                        <span class="price">2500,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Digestif', 2500)">Ajouter au Panier</button>
+                    </div>
+                </div>
+                <div class="product-item depur-digestif">
+                    <img src="../img/Poivre.jpg" alt="DéPur Agathe Miel">
+                    <div class="product-info">
+                        <h3>DéPur <br> Poivre Noir Moulu</h3>
+                        <p class="product-description">Nous offrons du poivre noir moulu sous plusieurs types d’emballage avec grammages variés. 
+                            <br>Voici quelques-unes des vertus du poivre noir : 
+                            <br>Amélioration de la digestion, propriétés anti-inflammatoires et analgésiques, renforcement du système immunitaire, stimulation de la circulation sanguine, action antioxydante et anti-âge, amélioration de l'absorption des nutriments, aide à la perte de poids, etc.</p>
+                        <span class="price">3000,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Digestif', 3000)">Ajouter au Panier</button>
+                    </div>
+                </div>
+                <div class="product-item depur-digestif">
+                    <img src="../img/Potasse.jpg" alt="DéPur Agathe Miel">
+                    <div class="product-info">
+                        <h3>DéPur <br> Potasse Liquide</h3>
+                        <p class="product-description">Nous produisons la potasse naturelle à base de peau de banane plantain : Vertus et Utilisations : 
+                            Valeurs nutritives de la potasse naturelle à base de peau de banane plantain :
+                            Sels minéraux alcalins comme : potassium (K), calcium (Ca), magnésium (Mg), Oligo-éléments (fer, zinc, manganèse, etc.
+                            Cette potasse est très utile pour cuisiner les sauces feuilles, le plat Ayimolou (riz-haricot) quelques gouttes pour adoucir la sauce tomate aigre, etc.</p>
+                        <span class="price">500,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Digestif', 500)">Ajouter au Panier</button>
+                    </div>
+                </div>
+            </div>
+        </Section>
+    </main>
+<div class="Avant">
+    <h2>Nos légumes déshydratés</h2>
+</div>
+    <main>
+        <section>
+            <div class="boisson">
+                <div class="product-item depur-cristal">
+                    <img src="../img/Gombo.jpg" alt="Liha">
+                    <div class="product-info">
+                        <h3>DéPur <br>Le gombo encore appelé Okra</h3>
+                        <p class="product-description">
+                            Le Gombo Déshydraté de EAGLE CONSULTING - TERROIR ET TRADITION : Une Révolution Nutritionnelle au Service du Monde
+                            <br>Le gombo est un trésor de la nature, riche en nutriments et en bienfaits pour la santé. Avec notre gombo déshydraté, nous vous offrons le meilleur de cette plante miraculeuse, tout en garantissant une conservation longue durée sans perte de ses valeurs nutritionnelles.
+                            <br>Pourquoi choisir notre gombo déshydraté ?
+                            <span class="hidden-text">
+                                <br>• Valeurs nutritives intactes : Conservez tous les bienfaits du gombo frais, même après cuisson.
+                                <br>• Propriétés mucilagineuses préservées : Idéal pour préparer des plats savoureux et nutritifs.
+                                <br>• Longue conservation : Un produit stable et facile à stocker, sans conservateurs.
+                                <br>• Solution idéale pour les marchés internationaux : Une opportunité pour les distributeurs et restaurateurs du monde entier.
+                                <br>À la conquête des 5 continents ! Notre ambition est de faire découvrir ce joyau de l’agriculture africaine à travers le monde.
+                                <br>Que vous soyez en Amérique, en Europe, en Asie, en Océanie ou en Afrique, nous vous garantissons un produit de qualité supérieure, issu d'un savoir-faire unique.
+                                <br>Gombo Déshydraté : Toute la fraîcheur, sans compromis !
+                                <br><br>Nos méthodes de séchage garantissent la préservation de toutes les vitamines et minéraux essentiels.
+                                <br>Nous nous engageons à offrir un produit 100 % naturel, sans additifs ni conservateurs.
+                                <br>Commandez dès aujourd’hui et profitez des bienfaits du gombo déshydraté où que vous soyez !
+                            </span>
+                        </p>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Lire la suite</button>
+                        <div>
+                        <span class="price">3000,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Cristal', 3000)">Ajouter au Panier</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item depur-cristal">
+                    <img src="../img/Aloma.jpg" alt="Tchoukoutou">
+                    <div class="product-info">
+                        <h3>DéPur <br> Aloma</h3>
+                        <p class="product-description">
+                            Opportunité de distribution - Vernonia Amygdaline Déshydratée - Un produit authentique et pratique !
+                            <br>Objet : Opportunité de Distribution - Vernonia Amygdaline Déshydratée : Un produit authentique et révolutionnaire !
+                            Vernonia Amygdalina connue sous le nom d’Aloma au Togo, d’Ama vivè au Bénin et de Ndolé au Cameroun. 
+                            <span class="hidden-text">
+                                <br>Grâce à un procédé exclusif de blanchiment, déshydratation et emballage sous vide , ce légume est pratique et facile à utiliser. Prêt à être réhydraté et cuit en quelques minutes.
+                                <br>Le Vernonia Amygdaline précuit et déshydratée offre une longue durée de conservation. 
+                                <br>Les retours des consommateurs sont extraordinaires, et nous recherchons activement des distributeurs fiables en Europe, au Canada et aux Etats-Unis pour des produits alimentaires sains, authentiques et pratiques.
+                            </span>
+                        </p>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Lire la suite</button>
+                        <div>
+                            <span class="price">2500,00 FCFA</span>
+                            <button class="buy-button" onclick="addToCart('DéPur Cristal', 2500)">Ajouter au Panier</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item depur-cristal">
+                    <img src="../img/Gboma.jpg" alt="Tchoukoutou">
+                    <div class="product-info">
+                        <h3>DéPur <br> Gboma</h3>
+                        <p class="product-description">
+                            Opportunité de Distribution - Gboma (Épinards) Précuit et Déshydraté : Une solution pratique et nutritive !
+                            Nous avons le plaisir de vous présenter le Gboma (épinards) précuit et déshydraté. Pour une préparation rapide et une longue conservation longue durée dans son emballage sous vide.
+                            Notre processus unique de précuisson et déshydratation assure à nos légumes une conservation de longue durée sans additifs aux fibres, vitamines et sels minéraux des légumes que nous mettons sur le marché.
+                            Grâce à notre méthode de déshydratation, le Gboma peut être conservé pendant de longues périodes sans perdre ses éléments essentiels (fibres, vitamines et sels minéraux) ce qui le rend parfait pour l'exportation et le stockage.
+                            Nous offrons ainsi une solution de qualité pour une longue durée de conservation .
+                            Nous sommes à la recherche de distributeurs.
+                        </p>
+                        <span class="price">2500,00 FCFA</span>
+                        <button class="buy-button" onclick="addToCart('DéPur Cristal', 2500)">Ajouter au Panier</button>
+                    </div>
+                </div>
+                <div class="product-item depur-cristal">
+                    <img src="../img/ADE.jpg" alt="Tchakpalo">
+                    <div class="product-info">
+                        <h3>DéPur <br> Adémè</h3>
+                        <p class="product-description"> 
+                            La Corète Potagère Déshydratée de EAGLE CONSULTING - TERROIR ET TRADITION : Une Invitation au Voyage Gastronomique
+                            La corète potagère, connue sous le nom d'Adémè, est un trésor de la cuisine togolaise. Avec notre version déshydratée, nous vous offrons la possibilité de savourer ce légume nutritif tout en bénéficiant d'une longue conservation et d'une facilité de transport.
+                            Pourquoi choisir notre corète potagère déshydratée ? 
+                            <span class="hidden-text">
+                                <br>•	Valeurs nutritives intactes : Tous les bienfaits du légume frais conservés.
+                                <br>•	Facilité de transport : Emportez la gastronomie togolaise partout avec vous.
+                                <br>•	Longue conservation : Idéal pour les amateurs de cuisine traditionnelle en dehors du pays.
+                                <br>•	Une solution pour les marchés internationaux : Un ingrédient phare de la cuisine africaine accessible à tous.
+                                <br>À la conquête du monde avec notre corète potagère ! Que vous soyez en Amérique, en Europe, en Asie, en Océanie ou en Afrique, notre corète potagère déshydratée vous offre une expérience culinaire authentique et riche en saveurs.
+                                <br>EAGLE CONSULTING - TERROIR ET TRADITION Une marque engagée pour une alimentation saine et durable.
+                                <br>Contactez-nous dès aujourd’hui pour une collaboration fructueuse !
+                            </span>
+                        </p>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Lire la suite</button>
+                        <div>
+                            <span class="price">2500,00 FCFA</span>
+                            <button class="buy-button" onclick="addToCart('DéPur Cristal', 2500)">Ajouter au Panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <div id="cart-container">
+            <h2>Votre Panier</h2>
+            <div id="cart-items">
+                <!-- Les articles ajoutés au panier s'afficheront ici -->
+            </div>
+            <div class="cart-total finish-shopping"> <!-- Ajout de la classe finish-shopping -->
+                <p>Total : <span id="total-price">0 FCFA</span></p>
+                <p>Pour passer à la caisse, cliquez ici :</p>
+                <button id="finish-button" class="finish-button" disabled onclick="window.location.href='Epice achat.html'">
+                    Terminer
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EAGLE CONSULTING - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/Epice produit.js"></script>
+</body>
+</html>

@@ -1,0 +1,671 @@
+/* Style général */
+
+:root {
+    --primary-color: #006a4e;
+    --secondary-color: #ffe600;
+    --accent-color: #c8102e;
+    --text-color: #333333;
+    --background-color: #390810;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* Header et menu */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.logo img {
+    max-width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+/* Assure que le bouton hamburger est visible sur mobile et le menu toujours visible sur PC */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style du menu déroulant */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: auto;
+    padding: 1rem;
+    border-radius: 5px;
+
+}
+#menu {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#menu ul li {
+    margin-bottom: 0.5rem;
+}
+
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu ul li a:hover {
+    background-color: var(--accent-color);
+    color: white !important;
+}
+
+/* Style du bouton Nos Domaines */
+.mini-btn {
+    background-color: #390810;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 2.5rem;
+    display: block;
+    width: auto;
+    position: absolute;
+    right: 1rem;
+    top: 60px; /* Ajustez selon la hauteur du header */
+    z-index: 10; /* Pour qu'il reste au-dessus */
+}
+
+.mini-btn:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* Style du menu des domaines */
+#domain-list {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 10;
+    width: auto;
+}
+
+#domain-list.show {
+    display: block; /* Afficher lorsque actif */
+}
+
+#domain-list li {
+    margin: 5px 0;
+}
+
+#domain-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+#domain-list a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    #menu.visible {
+        display: flex;
+    }
+
+    .mini-btn {
+        display: block;
+    }
+}
+
+/* Affichage du menu sur desktop */
+@media (min-width: 769px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+    }
+
+    #menu ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu ul li {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#390810;
+    color: white;
+    margin: 10;
+    padding: 10;
+    text-align: center;
+}
+
+.product-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-header h1 {
+    font-size: 2.5em;
+    color: white;
+    background-color: #390810;
+    margin-top: 50pt;
+}
+
+.product-header p {
+    font-size: 1.2em;
+    color: white;
+}
+
+.Panier {
+    background-color:#006a4e; /* Rouge clair */
+    color: white; /* Texte rouge foncé */
+    padding: 5px;
+    border-radius: none;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: none;
+    border: none; /* Bordure légèrement plus foncée */
+}
+
+/* Grille des produits */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 50px;
+    margin-bottom: 50pt;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.product-info h3 {
+    font-size: 1.8em;
+    color: #2a6e3f;
+}
+
+.product-description {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.buy-button {
+    background-color: #2a6e3f;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #1d804e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-header h1 {
+        font-size: 2.2em;
+    }
+
+    .product-item {
+        padding: 15px;
+    }
+
+    .product-info h3 {
+        font-size: 1.6em;
+    }
+
+    .product-description {
+        font-size: 1em;
+    }
+}
+
+
+.boisson {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50pt;
+    margin-bottom: 50pt;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.product-info h3 {
+    font-size: 1.8em;
+    color: #2a6e3f;
+}
+
+.product-description {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.buy-button {
+    background-color: #2a6e3f;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #1d804e;
+}
+
+/* Style du conteneur du panier uniquement */
+
+main {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 20pt;
+}
+
+#cart-container {
+    width: 100%;
+    max-width: 400px; /* Largeur max */
+    background-color: white; /* Fond blanc */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    text-align: center;
+    margin-bottom: 50pt;
+}
+
+/* Titre du panier */
+#cart-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Conteneur des articles */
+#cart-items {
+    min-height: 100px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Section total + bouton */
+#cart-container .cart-total {
+    background-color:#006a4e; /* Jaune clair */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#cart-items span {
+    color: black !important;
+}
+
+/* Texte total */
+#cart-container .cart-total p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Bouton de validation */
+#cart-container .finish-button {
+    background-color: #390810; /* Rouge foncé */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#cart-container .finish-button:disabled {
+    background-color: #ccc; /* Grisé si désactivé */
+    cursor: not-allowed;
+    color: black;
+}
+
+#cart-container .finish-button:hover:not(:disabled) {
+    background-color: #570d1b; /* Rouge plus foncé au survol */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-header h1 {
+        font-size: 2.2em;
+    }
+
+    .product-item {
+        padding: 15px;
+    }
+
+    .product-info h3 {
+        font-size: 1.6em;
+    }
+
+    .product-description {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+.intro h2 {
+    color: var(--primary-color);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.domains {
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.domains h2 {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.domain-buttons .btn {
+    display: block;
+    margin: 5px 0;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.domain-buttons .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.bijoux-section {
+    padding: 50px 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.bijoux-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #c8102e;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+@keyframes fadeInDown {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+0% {
+    opacity: 0;
+    transform: translateY(20px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes scaleIn {
+0% {
+    transform: scale(0.9);
+    opacity: 0;
+}
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+.carousel img {
+animation: scaleIn 1s ease-out;
+}
+
+audio {
+display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #024f3a;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - La Maison des Perles</title>
+    <link rel="stylesheet" href="../css/santé témoignage.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/EAGLE LOGO .jpg" alt="Logo de l'entreprise">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="santé index.html">Accueil</a></li>
+                <li><a href="santé propos.html">À propos</a></li>
+                <li><a href="Santé produit.html">Produits</a></li>
+                <li><a href="Santé témoignage.html">Témoignages</a></li>
+                <li><a href="santé achat.html">Acheter</a></li>
+                <li><a href="../index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <button id="domain-toggle" class="mini-btn">Domaines</button>
+            <ul id="domain-list" class="hidden">
+                <a href="Liqueur index.html" class="btn">Boissons et Liqueurs</a>
+                <a href="Epices index.html" class="btn">Epices Farines et Légumes</a>
+                <a href="service index.html" class="btn">Service Traiteur</a>
+                <a href="santé index.html" class="btn">Joaillerie et Lithothérapie</a>
+                <a href="Terre index.html" class="btn">Articles en terre cuite</a>
+            </ul>
+    </header>
+
+    <div class="testimonials-container">
+        <h1>Témoignages de nos clients</h1>
+        
+        <!-- Témoignage 1 -->
+        <div class="testimonial">
+            <h3>Alice</h3>
+            <p>J'ai acheté un collier en agate et je me sens plus calme et équilibrée. Un vrai plaisir !</p>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="testimonial">
+            <h3>Ben</h3>
+            <p>Les perles sont magnifiques, et le service client est irréprochable. Je recommande vivement !</p>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="testimonial">
+            <h3>Justin</h3>
+            <p>Super expérience ! Le bracelet en améthyste est très élégant et a un vrai effet apaisant.</p>
+        </div>
+
+        <div class="order-section">
+            <h2>Passer une commande</h2>
+            <form id="order-form">
+                <label for="product">Produit :</label>
+                <input type="text" id="product" name="product" required placeholder="Nom du produit">
+                
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" required min="1" value="1">
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email">
+                
+                <button type="submit">Passer la commande</button>
+            </form>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 EAGLE CONSULTING - Tous droits réservés.</p>
+    </footer>
+    <script src="../js/santé temoignage.js"></script>
+</body>
+</html>

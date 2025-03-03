@@ -1,0 +1,234 @@
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables globales */
+:root {
+    --primary-color: #024f3a;
+    --secondary-color: #ffe600;
+    --accent-color: #c8102e;
+    --text-color: #333333;
+    --background-color: #390810;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    padding: 80px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+}
+
+/* --- En-tête À propos --- */
+.about-header, .certifications {
+    text-align: justify;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.about-header:hover, .certifications:hover {
+    transform: translateY(-5px);
+}
+
+.about-header h1, .certifications h1 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.about-header p, .certifications p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+strong {
+    color: var(--secondary-color);
+}
+
+/* --- Sections Mission, Vision, Values --- */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px; /* Réduire l'écart horizontal */
+}
+
+.mission, .vision, .values {
+    text-align: justify;
+    line-height: 1.8;
+    flex: 1 1 32%; /* Assurer une largeur égale pour chaque section */
+    min-width: 300px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: white;
+    margin-bottom: 10px;
+}
+.mission h2, .vision h2, .values h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Centrer les paragraphes sans réduire la largeur des cellules */
+.mission p, .vision p, .values p {
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+.btn-download-container {
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    margin-top: 50px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 20px 15px;
+    background-color: white;
+    color: #024f3a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #390810;
+}
+
+
+
+/* --- Media Queries pour la Responsivité --- */
+
+/* Pour les écrans de petite taille (mobiles) */
+@media screen and (max-width: 767px) {
+    .about-header, .certifications, .mission, .vision, .values {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about-header h1, .certifications h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-header p, .certifications p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mission, .vision, .values {
+        flex: none;
+        width: 100%;
+    }
+
+    .values li {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        padding: 40px;
+    }
+
+    .about-header h1, .certifications h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-header p, .certifications p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content {
+        gap: 5px;
+    }
+
+    .mission, .vision, .values {
+        flex: 1 1 45%;
+    }
+}
+
+/* Pour les grands écrans (ordinateurs de bureau) */
+@media screen and (min-width: 1025px) {
+    main {
+        padding: 80px;
+    }
+
+    .about-header, .certifications, .mission, .vision, .values {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+
+    .about-header h1, .certifications h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-header p, .certifications p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        gap: 5px;
+    }
+
+    .mission, .vision, .values {
+        flex: 1;
+    }
+}
+
+.mission:hover, .vision:hover, .values:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-family: var(--font-title);
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}

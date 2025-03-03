@@ -1,0 +1,104 @@
+/* --- Conteneur principal --- */
+.domains-description-section {
+    max-width: 1400px;
+    background: var(--background-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Titre principal en dehors de la grille --- */
+.Titre {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: #006a4e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* --- Conteneur des cartes (deux colonnes) --- */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+/* --- Cartes des produits --- */
+.card {
+    background: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    overflow: hidden;
+}
+
+/* --- Effet au survol des cartes --- */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Images des produits --- */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- Titres des produits --- */
+.card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* --- Description des produits --- */
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+    text-align: justify;
+}
+
+/* --- Boutons "En savoir plus" --- */
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Effet au survol du bouton --- */
+.card a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* --- Responsive Design (une seule colonne sur mobile) --- */
+@media screen and (max-width: 768px) {
+    .Titre {
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}

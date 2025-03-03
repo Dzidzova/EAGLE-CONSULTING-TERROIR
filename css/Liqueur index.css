@@ -1,0 +1,277 @@
+/* Style général */
+
+:root {
+    --primary-color: #006a4e;
+    --secondary-color: #ffe600;
+    --accent-color: #c8102e;
+    --text-color: #333333;
+    --background-color: #390810;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header et menu */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+/* Assure que le bouton hamburger est visible sur mobile et le menu toujours visible sur PC */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style du menu déroulant */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#menu ul li {
+    margin-bottom: 0.5rem;
+}
+
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu ul li a:hover {
+    background-color: var(--accent-color);
+    color: white !important;
+}
+
+/* Style du bouton Nos Domaines */
+.mini-btn {
+    background-color: #390810;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 2.5rem;
+    display: block;
+    width: auto;
+    position: absolute;
+    right: 1rem;
+    top: 60px; /* Ajustez selon la hauteur du header */
+    z-index: 10; /* Pour qu'il reste au-dessus */
+}
+
+.mini-btn:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* Style du menu des domaines */
+#domain-list {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 10;
+    width: auto;
+}
+
+#domain-list.show {
+    display: block; /* Afficher lorsque actif */
+}
+
+#domain-list li {
+    margin: 5px 0;
+}
+
+#domain-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+#domain-list a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    #menu.visible {
+        display: flex;
+    }
+
+    .mini-btn {
+        display: block;
+    }
+}
+
+/* Affichage du menu sur desktop */
+@media (min-width: 769px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+    }
+
+    #menu ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu ul li {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 10rem 18rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/liqueur\ fond.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.intro {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    color: var(--primary-color);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background-color: #024f3a;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}

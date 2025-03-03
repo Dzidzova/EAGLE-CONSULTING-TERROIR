@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - La Maison des Perles</title>
+    <link rel="stylesheet" href="../css/Liqueur achat.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/EAGLE LOGO .jpg" alt="Logo de l'entreprise">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="Liqueur index.html">Accueil</a></li>
+                <li><a href="Liqueur a propos.html">À propos</a></li>
+                <li><a href="Liqueur produit.html">Produits</a></li>
+                <li><a href="Liqueur temoignage.html">Témoignages</a></li>
+                <li><a href="Liqueur achat.html">Acheter</a></li>
+                <li><a href="../index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <button id="domain-toggle" class="mini-btn">Domaines</button>
+            <ul id="domain-list" class="hidden">
+                <a href="Liqueur index.html" class="btn">Boissons et Liqueurs</a>
+                <a href="Epices index.html" class="btn">Epices Farines et Légumes</a>
+                <a href="service index.html" class="btn">Service Traiteur</a>
+                <a href="santé index.html" class="btn">Joaillerie et Lithothérapie</a>
+                <a href="Terre index.html" class="btn">Articles en terre cuite</a>
+            </ul>
+    </header>
+
+    <!-- Page du Panier -->
+    <div class="cart-container">
+        <h1>Votre Panier</h1>
+        <div class="cart-items" id="cart-items">
+            <!-- Les articles ajoutés au panier seront listés ici -->
+        </div>
+        <div class="cart-total">
+            <p>Total : <span id="total-price">0 FCFA</span></p>
+            <button onclick="checkout()" 
+                    style="background-color: #006a4e; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                🛒 Passer à la caisse
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EAGLE CONSULTING - Tous droits réservés.</p>
+    </footer>
+    <script src="../js/Liqueur achat.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables globales */
+:root {
+    --primary-color: #024f3a;
+    --secondary-color: #ffe600;
+    --accent-color: #c8102e;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+
+
+/* Conteneur principal */
+.contact-form, .contact-info, .social-media {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #024f3a;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover, .contact-info:hover, .social-media:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulaire de contact */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 106, 78, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--primary-color), #004d38);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #004d38, var(--primary-color));
+    transform: translateY(-2px);
+}
+
+/* Informations de contact */
+.contact-info {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), #004d38);
+    color: white;
+}
+
+.contact-info h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Réseaux sociaux */
+.social-media {
+    text-align: center;
+    background: #024f3a;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: var(--accent-color);
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Icônes blanches */
+}
+
+/* Carte et bouton */
+.map {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.map-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary-color), #004d38);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.map-button:hover {
+    background: linear-gradient(135deg, #004d38, var(--primary-color));
+    transform: translateY(-2px);
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+    .contact-form, .contact-info, .social-media {
+        padding: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form, .contact-info, .social-media {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+    }
+
+    .contact-form button, .map-button {
+        padding: 10px 20px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        padding: 10px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}

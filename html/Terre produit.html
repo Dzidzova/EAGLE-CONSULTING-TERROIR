@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - La Maison des Perles</title>
+    <link rel="stylesheet" href="../css/santé produit.css">
+</head>
+
+<style>
+
+.bijoux-section {
+            padding: 50px 20px;
+            background-color: white;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .bijoux-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #c8102e;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-height: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .carousel img {
+        animation: scaleIn 1s ease-out;
+    }
+
+    audio {
+        display: none;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/EAGLE LOGO .jpg" alt="Logo de l'entreprise">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="santé index.html">Accueil</a></li>
+                <li><a href="santé propos.html">À propos</a></li>
+                <li><a href="Santé produit.html">Produits</a></li>
+                <li><a href="Santé témoignage.html">Témoignages</a></li>
+                <li><a href="santé achat.html">Acheter</a></li>
+                <li><a href="../index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <button id="domain-toggle" class="mini-btn">Domaines</button>
+            <ul id="domain-list" class="hidden">
+                <a href="Liqueur index.html" class="btn">Boissons et Liqueurs</a>
+                <a href="Epices index.html" class="btn">Epices Farines et Légumes</a>
+                <a href="service index.html" class="btn">Service Traiteur</a>
+                <a href="santé index.html" class="btn">Joaillerie et Lithothérapie</a>
+                <a href="Terre index.html" class="btn">Articles en terre cuite</a>
+            </ul>
+    </header>
+
+    <div class="product-container">
+        <div class="product-header">
+            <h1>Nos Perles</h1>
+            <p>Découvrez nos perles faites à la main, inspirées des traditions africaines, alliant lithothérapie et bijou d’exception.</p>
+        </div>
+
+        <!-- Grille des produits -->
+        
+        <audio id="background-music" loop autoplay>
+            <source src="music.mp3" type="audio/mp3">
+            Votre navigateur ne supporte pas l'audio.
+        </audio>
+        
+        <section class="bijoux-section" id="colliers">
+            <h2>Colliers d'exception</h2>
+            <p>Motifs géométriques et couleurs vibrantes pour illuminer votre tenue.</p>
+            <div class="carousel" data-images='["../img/t1.jpg", "../img/t2.jpg", "../img/t3.jpg", "../img/t4.jpg"]'></div>
+        </section>
+    
+        
+    
+    <footer>
+        <p>&copy; 2025 EAGLE CONSULTING - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/santé produit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".bijoux-section");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            sections.forEach(section => observer.observe(section));
+
+            document.querySelectorAll(".carousel").forEach(carousel => {
+                let images = JSON.parse(carousel.dataset.images);
+                images.forEach((img, index) => {
+                    let imgElem = document.createElement("img");
+                    imgElem.src = img;
+                    if (index === 0) imgElem.classList.add("active");
+                    carousel.appendChild(imgElem);
+                });
+
+                let currentIndex = 0;
+                setInterval(() => {
+                    let imgs = carousel.querySelectorAll("img");
+                    imgs[currentIndex].classList.remove("active");
+                    currentIndex = (currentIndex + 1) % imgs.length;
+                    imgs[currentIndex].classList.add("active");
+                }, 10000); // Passage des images toutes les 10 secondes
+            });
+        });
+    </script>
+
+    
+</body>
+</html>
